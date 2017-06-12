@@ -39,6 +39,12 @@
             <input type="text" id="transType">
         </td>
     </tr>
+    <tr>
+        <td>距离</td>
+        <td>
+            <input type="text" id="distance">
+        </td>
+    </tr>
 </table>
 <h1>输入订单号</h1>
 <table>

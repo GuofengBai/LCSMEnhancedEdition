@@ -1,6 +1,7 @@
 package cn.edu.nju.LCSMEnhancedEdition.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.sql.Date;
@@ -20,6 +21,7 @@ public class DispatchBill {
     private String state;
 
     @Id
+    @GeneratedValue
     public int getId() {
         return id;
     }

@@ -53,13 +53,14 @@ public class BillController {
 
     @RequestMapping(value = "/transBill", method = RequestMethod.POST)
     @ResponseBody
-    public String newTransBill(String array, String from_hall, String to_hall, String money, String transType, HttpServletRequest request) {
+    public String newTransBill(String array, String from_hall, String to_hall, String money, String transType, String distance, HttpServletRequest request) {
         TransBill transBill = new TransBill();
         transBill.setDate(new Date(System.currentTimeMillis()));
         transBill.setFrom_hall(from_hall);
         transBill.setTo_hall(to_hall);
         transBill.setMoney(Double.parseDouble(money));
         transBill.setType(transType);
+        transBill.setDistance(Double.parseDouble(distance));
         Employee employee = (Employee) request.getSession().getAttribute("employee");
         transBill.setEmployeeId(employee.getId());
         String[] list = array.split(",");

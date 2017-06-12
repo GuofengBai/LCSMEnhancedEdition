@@ -20,6 +20,7 @@ public class TransBill {
     private Double money;
     private String type;
     private String employeeId;
+    private Double distance;
 
     @Id
     @GeneratedValue
@@ -79,4 +80,11 @@ public class TransBill {
         this.employeeId = employeeId;
     }
 
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
 }
