@@ -21,6 +21,8 @@ public class TransBill {
     private String type;
     private String employeeId;
     private Double distance;
+    private int number;
+    private Double weight;
 
     @Id
     @GeneratedValue
@@ -86,5 +88,21 @@ public class TransBill {
 
     public void setDistance(Double distance) {
         this.distance = distance;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public Double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 }

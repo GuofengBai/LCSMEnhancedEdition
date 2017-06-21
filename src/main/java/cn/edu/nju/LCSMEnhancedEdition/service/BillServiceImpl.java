@@ -73,6 +73,8 @@ public class BillServiceImpl implements BillService{
     public int newTransBill(TransBill transBill, String[] bills) {
         int transId = billDAO.newTransBill(transBill);
         int order;
+        int number = 0;
+        double weight = 0;
         if (transBill.getFrom_hall().endsWith("本部")) {
             if (transBill.getTo_hall().endsWith("本部")) {
                 order = 2;
@@ -91,8 +93,14 @@ public class BillServiceImpl implements BillService{
             } else {
                 startBill.setTransBill3(transId);
             }
+            weight += startBill.getWeight();
             billDAO.updateStartBill(startBill);
         }
+        number = bills.length;
+        transBill.setNumber(number);
+        transBill.setWeight(weight);
+        transBill.setId(transId);
+        billDAO.updateTransBill(transBill);
         return transId;
     }
 
