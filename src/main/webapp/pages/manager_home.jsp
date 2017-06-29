@@ -21,6 +21,8 @@
     <a href="<%=request.getContextPath()%>/manager/s_product_dim">订单产品维分析</a>
     <br>
     <a href="<%=request.getContextPath()%>/manager/t_hall_dim">运输单地区维分析</a>
+    <br>
+    <a href="<%=request.getContextPath()%>/logout">登出</a>
 </nav>
 </body>
 </html>

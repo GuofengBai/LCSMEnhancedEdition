@@ -85,12 +85,13 @@
             $.ajax("<%=request.getContextPath()%>/bill/transBill", {
                 type: 'POST',
                 data: tosend,
-                datatype: "text",
+                datatype: "json",
                 success: function (result) {
                     alert("新增运输单成功，单号为：" + result);
                     location.reload(true);
                 },
                 error: function (result) {
+                    alert("新增运输单成功，单号为：" + result);
                     location.reload(true);
                 }
             });
